@@ -1,0 +1,335 @@
+:root {
+    --light-purple: rgb(92, 82, 127);
+    --roboto:'Roboto', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: transparent;
+}
+
+main {
+    background-color: transparent;
+    height: 100vh;
+    width: 100vw;
+    font-family: var(--roboto);
+}
+
+/*Form*/
+.section-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-purple);
+    width: 40vw;
+    height: 80vh;
+    position: relative;
+    top: 10vh;
+    left: 30vw;
+    box-shadow: 20px 20px 10px 10px rgba(0, 0, 0, 0.2);;
+    transform: translateX(-100vw);
+    transition: all 1s ease-in-out;
+}
+
+.section-form.active {
+    transform: translateX(0vw);
+}
+
+.section-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.section-form h1 {
+    color: white;
+    position: relative;
+    bottom: 4vh;
+    letter-spacing: 2px;
+    font-size: 40px;
+    -webkit-box-reflect: below 0 linear-gradient(transparent, white);
+}
+
+.section-form form div {
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background:repeating-linear-gradient(
+        135deg,
+        rgb(38, 28, 44) 5px,
+        rgb(38, 28, 44) 10px,
+        rgb(182, 25, 25) 10px,
+        rgb(182, 25, 25) 13px
+      );;
+}
+
+.section-form form div label {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.section-form form div input,
+.section-form form div select {
+    width: 20vw;
+    color: rgb(120, 122, 145);
+    border: none
+}
+
+input[type=submit] {
+    align-self: center;
+    width: 10vw;
+    height: 5vh;
+    margin-top: 20px;
+    background-color: rgb(61, 8, 123);
+    box-shadow: 7px 7px 7px 2px rgba(61, 8, 123, 0.5);
+    text-transform: uppercase;
+    color: white;
+    border: none;
+    transition: all 0.5s ease-in-out;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(191, 162, 219);
+    color: black;
+}
+
+/*Questions*/
+
+.section-questions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(191, 162, 219);
+    width: 60vw;
+    height: 80vh;
+    position: absolute;
+    top: 10vh;
+    left: 20vw;
+    transform: translateX(100vw);
+    transition: all 1s ease-in-out;
+}
+
+.section-questions.active {
+    transform: translateX(0);
+}
+
+.section-questions.rotateFirst {
+    transform-style: preserve-3d;
+    animation: rotateFirst 1s ease-in-out;
+}
+
+.section-questions.rotateSecond {
+    transform-style: preserve-3d;
+    transform-origin: center;
+    animation: rotateSecond 1s ease-in-out;
+}
+
+@keyframes rotateFirst {
+    from { transform: rotate3d(0, 1, 0, 0); }
+    to { transform: rotate3d(0, 1, 0, 360deg); }
+}
+
+
+@keyframes rotateSecond {
+    from { transform: rotate3d(0, 1, 0, 0); }
+    to { transform: rotate3d(0, 1, 0, -360deg); }
+}
+
+
+.score {
+    background-color:rgb(61, 8, 123);
+    width: 10vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(191, 162, 219);
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.question-text {
+    width: 80%;
+    background-color: rgb(243, 241, 245);
+    padding: 20px;
+    border-radius: 5px;
+    color: rgb(120, 122, 145);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 20px;
+    width: auto;
+    height: 8vh;
+    background-color: rgb(243, 241, 245);
+    color: rgb(120, 122, 145);
+    border-radius: 5px;
+}
+
+.info p {
+    margin: 5px;
+}
+
+/*Boolean*/
+.buttons-boolean button {
+    width: 20vw;
+    margin: 20px;
+    height: 10vh;
+    color: rgb(243, 241, 245);
+    border: thin solid rgb(120, 122, 145);
+    transition: all 0.3s ease-in-out;
+    font-size: 20px;
+}
+
+.true {
+   background-color: rgb(100, 201, 207); 
+}
+
+.false {
+    background-color: rgb(125, 25, 53);
+}
+
+.buttons-boolean button:hover {
+    background-color: rgb(243, 241, 245);
+    color: rgb(120, 122, 145);
+}
+
+/*Multiple*/
+
+.buttons-multiple {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+}
+
+.buttons-multiple button {
+    width: 80%;
+    margin-bottom: 20px;
+    height: 5vh;
+    background-color: rgb(127, 200, 169);
+    color: rgb(243, 241, 245);
+    border: thin solid rgb(120, 122, 145);
+    font-size: 16px;
+}
+
+/*Restart*/
+
+.results {
+    background-color: rgb(243, 241, 245);
+    width: 80%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+}
+
+.final-result {
+    color: black;
+    font-size: 40px;
+    font-weight: 700;
+    width: 80%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.final-score {
+    font-size: 30px;
+    color: rgb(120, 122, 145);
+}
+
+.final-text {
+    font-size: 30px;
+    color: rgb(120, 122, 145);
+}
+
+.restart {
+    width: 80%;
+    height: 40%;
+    background-color: rgb(125, 25, 53);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.restart-text {
+    color: rgb(243, 241, 245);
+    font-size: 30px;
+}
+
+.restart-button {
+    width: 50%;
+    height: 30%;
+    background-color: rgb(100, 201, 207);
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.restart-button:hover {
+    background-color: rgb(61, 8, 123);
+    color: rgb(243, 241, 245);
+}
+
+/*CUBE ANIMATION*/
+
+.wall-cube {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(50, 1fr);
+    grid-template-rows: repeat(50, 1fr);
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+}
+
+.cube {
+    width: 2vh;
+    height: 2vh;
+    transform-style:preserve-3d;
+    animation: cube3d 30s linear infinite;
+}
+
+.face {
+    position: absolute;
+    width: 2vh;
+    height: 2vh;
+    border: thin solid black;
+}
+
+.top    { transform: translate3d(0, 1vh, 0) rotate3d(1, 0, 0, 90deg); }
+.bottom { transform: translate3d(0, -1vh, 0) rotate3d(1, 0, 0, 90deg); }
+.left   { transform: translate3d(-1vh, 0, 0) rotate3d(0, 1, 0, 90deg); }
+.right  { transform: translate3d(1vh, 0, 0) rotate3d(0, 1, 0, 90deg); }
+.front  { transform: translate3d(0, 0, 1vh) rotate3d(0, 0, 0, 90deg); }
+.back   { transform: translate3d(0, 0, -1vh) rotate3d(0, 0, 0, 90deg); }
+
+@keyframes cube3d {
+    from { transform: rotate3d(0, 0, 0, 0); }
+    to { transform: rotate3d(1, 1, 1, 360deg); }
+}

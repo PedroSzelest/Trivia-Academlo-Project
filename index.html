@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <title>Trivia</title>
+</head>
+<body>
+    <main>
+        <div class="wall-cube"></div>
+        <section class="section-form active">
+            <h1>TRIVIA</h1>
+            <form action="#">
+                <div class="number-div">
+                    <label for="number-input">Number of questions:</label>
+                    <input type="number" name="nubmer-input" id="number-input" min="10" max="50" value="10">
+                </div>
+                <div class="category-div">
+                    <label for="category-select">Select Category:</label>
+                    <select name="category-select" id="category-select">
+                        <option value="any">Any Category</option>
+                        <option value="9">General knowledge</option>
+                        <option value="10">Entertainment: Books</option>
+                        <option value="11">Entertainment: Film</option>
+                        <option value="12">Entertainment: Music</option>
+                        <option value="13">Entertainment: Musical and Theatres</option>
+                        <option value="14">Entertainment: Television</option>
+                        <option value="15">Entertainment: Video Games</option>
+                        <option value="16">Entertainment: Board Games</option>
+                        <option value="17">Science & Nature</option>
+                        <option value="18">Science: Computers</option>
+                        <option value="19">Science: Mathematics</option>
+                        <option value="20">Mythology</option>
+                        <option value="21">Sports</option>
+                        <option value="22">Geography</option>
+                        <option value="23">History</option>
+                        <option value="24">Politics</option>
+                        <option value="25">Art</option>
+                        <option value="26">Celebrities</option>
+                        <option value="27">Animals</option>
+                        <option value="28">Vehicles</option>
+                        <option value="29">Entertainment: Comics</option>
+                        <option value="30">Science: Gadgets</option>
+                        <option value="31">Entertainment: Japanese Anime & Manga</option>
+                        <option value="32">Entertainment: Cartoon & Animations</option>
+                    </select>
+                </div>
+                <div class="difficulty-div">
+                    <label for="difficulty-select">Select Difficulty:</label>
+                    <select name="difficulty-select" id="difficulty-select">
+                        <option value="any">Any Difficulty</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div class="type-div">
+                    <label for="type-select">Select Type:</label>
+                    <select name="type-select" id="type-select">
+                        <option value="any">Any Type</option>
+                        <option value="multiple">Multiple Choice</option>
+                        <option value="boolean">True / False</option>
+                    </select>
+                </div>
+                <input type="submit" value="Start">
+            </form>
+        </section>
+        <section class="section-questions">
+            <!-- <div class="score">Score: 00</div>
+            <p class="question-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ratione tempore quidem voluptatibus, distinctio odio beatae numquam dolorum omnis. Aliquam eaque incidunt omnis modi asperiores? Consequuntur cumque delectus alias nemo?</p>
+            <div class="info">
+                <p class="category">Category: Space</p>
+                <p class="difficulty">Difficulty: Hard</p>
+            </div>
+            <div class="buttons-boolean">
+                <button class="true">TRUE</button>
+                <button class="false">FALSE</button>
+            </div>
+            <div class="buttons-multiple">
+                <button class="option1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qu</button>
+                <button class="option2">Lorem ipsum dolor sit ameinctioluta,obis aspernatur sequi voluptatem saepe ad et.</button>
+                <button class="option3">Lorem ipsumur alr epe repellat, ipsum culpa at soluta.</button>
+                <button class="option4">Loris quidem. Quaerat praesentium autem vitae? Asperiores ex rem ea minus, vero esse unde nisi!</button>
+            </div> -->
+            <!-- <div class="results">
+                <p class="final-result">CONGRATULATIONS!</p>
+                <p class="final-score">Your score was 10 of 10</p>
+                <p class="final-text">You got more than half right</p>
+            </div>
+            <div class="restart">
+                <p class="restart-text">If you want to try again, press the button below</p>
+                <button class="restart-button">RESTART</button>
+            </div> -->
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
